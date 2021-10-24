@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="6f48e4506fc51989df5f04e9b4188078323d2af1d0ad2b4707f334861a1f821a.html">Llenar Una Nueva Vacante Con Todos Los Campos Y Adjuntar Un Archivo</a></span>
+                > <span class="truncate-60"><a
+                    href="61ea609073d93e3e30e99115f8409d1fcabbd78d9903ddb7d63d0c01f1127bf6.html">Se crea una nueva vacante </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-10-2021 02:26</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Llenar Una Nueva Vacante Con Todos Los Campos Y Adjuntar Un Archivo </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                como administrador crear una nueva vacante con todos los campos requeridos<br />
+y adjuntar un archivo
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Se crea una nueva vacante
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="07931d6dce44e0603dedfc7ae9bd0c715ac1ae384e41486e14c7dcc60c161097.png" title=" Given el empleado administrativo se encuentra logueado en la web de OrangeHRM" width="1920"/>
+                <img src="07931d6dce44e0603dedfc7ae9bd0c715ac1ae384e41486e14c7dcc60c161097.png" title=" Administrador open landing page" width="1920"/>
+                <img src="07931d6dce44e0603dedfc7ae9bd0c715ac1ae384e41486e14c7dcc60c161097.png" title=" Administrador opens the Landing page" width="1920"/>
+                <img src="850e2a1223a921ec723ef8c1da2541e1a035675d64a9ff3af42bb99eb6f44748.png" title=" Administrador opens the Landing page (completed)" width="1920"/>
+                <img src="850e2a1223a921ec723ef8c1da2541e1a035675d64a9ff3af42bb99eb6f44748.png" title=" Administrador open landing page (completed)" width="1920"/>
+                <img src="850e2a1223a921ec723ef8c1da2541e1a035675d64a9ff3af42bb99eb6f44748.png" title=" Administrador do login orange" width="1920"/>
+                <img src="9044a2360959d206e1e1365e6bb23103c63ebdcd84ce9d35c731a5bdc0392b0b.png" title=" Administrador clears field user name" width="1920"/>
+                <img src="a596fbe8dc8ea4dcf0af446510b4b166644bbc04475717b865e3a744da8d5e4f.png" title=" Administrador clears field user name (completed)" width="1920"/>
+                <img src="a596fbe8dc8ea4dcf0af446510b4b166644bbc04475717b865e3a744da8d5e4f.png" title=" Administrador enters 'Admin' into user name" width="1920"/>
+                <img src="f197e4be12c57534144923041fbfaaeaf3150940e888704461c73167817594bc.png" title=" Administrador enters 'Admin' into user name (completed)" width="1920"/>
+                <img src="f197e4be12c57534144923041fbfaaeaf3150940e888704461c73167817594bc.png" title=" Administrador clears field Password" width="1920"/>
+                <img src="1f6e9eaa40929596a87ede6140fc68648d1645323eecdb4c49f87772b5229749.png" title=" Administrador clears field Password (completed)" width="1920"/>
+                <img src="1f6e9eaa40929596a87ede6140fc68648d1645323eecdb4c49f87772b5229749.png" title=" Administrador enters 'admin123' into Password" width="1920"/>
+                <img src="0418a243dad086272461903a70f1d0006ae21a8a402d5764f78730167a1c2bf7.png" title=" Administrador enters 'admin123' into Password (completed)" width="1920"/>
+                <img src="0418a243dad086272461903a70f1d0006ae21a8a402d5764f78730167a1c2bf7.png" title=" Administrador clicks on boton loginorangehrm" width="1920"/>
+                <img src="9dfcd5069d2873f73e2c4b0f7486a88a4169e97e5a2462c793aa7ce79f21c6da.png" title=" Administrador clicks on boton loginorangehrm (completed)" width="1920"/>
+                <img src="9dfcd5069d2873f73e2c4b0f7486a88a4169e97e5a2462c793aa7ce79f21c6da.png" title=" Administrador do login orange (completed)" width="1920"/>
+                <img src="9dfcd5069d2873f73e2c4b0f7486a88a4169e97e5a2462c793aa7ce79f21c6da.png" title=" Given el empleado administrativo se encuentra logueado en la web de OrangeHRM (completed)" width="1920"/>
+                <img src="a410d48bd44c7d9468857a3cc1031030cac9f8bbc014b4e1783aef56e093a63e.png" title=" When el empleado quiere crear una nueva vacante" width="1920"/>
+                <img src="a410d48bd44c7d9468857a3cc1031030cac9f8bbc014b4e1783aef56e093a63e.png" title=" Administrador fill fields vacancy new" width="1920"/>
+                <img src="a410d48bd44c7d9468857a3cc1031030cac9f8bbc014b4e1783aef56e093a63e.png" title=" Administrador clicks on recruitmentMenu" width="1920"/>
+                <img src="7d87b638fd0435d60176b1faebf5057c30a6ef83106b165aad1f0eb591ce1fe6.png" title=" Administrador clicks on recruitmentMenu (completed)" width="1920"/>
+                <img src="7d87b638fd0435d60176b1faebf5057c30a6ef83106b165aad1f0eb591ce1fe6.png" title=" Administrador clicks on Vacancies" width="1920"/>
+                <img src="9b5d2b02a0071d7149e7782f86051013dc6b630e83a14179660043fbf7573f7a.png" title=" Administrador clicks on Vacancies (completed)" width="1920"/>
+                <img src="9b5d2b02a0071d7149e7782f86051013dc6b630e83a14179660043fbf7573f7a.png" title=" Administrador clicks on btnAdd" width="1920"/>
+                <img src="1234eaba93d8b394fcfab62130fc7ccdcca46bb7362e3f52bff44a0ccecebee3.png" title=" Administrador clicks on btnAdd (completed)" width="1920"/>
+                <img src="1234eaba93d8b394fcfab62130fc7ccdcca46bb7362e3f52bff44a0ccecebee3.png" title=" Administrador select Database Administrator on jobTitle" width="1920"/>
+                <img src="a0dab93e024c0776a41df521618415b0e88f18121aa0698959a81cd5a9813082.png" title=" Administrador select Database Administrator on jobTitle (completed)" width="1920"/>
+                <img src="a0dab93e024c0776a41df521618415b0e88f18121aa0698959a81cd5a9813082.png" title=" Administrador clears field vacancyName" width="1920"/>
+                <img src="6afdb3b34c5f0c5d1682e6ce7085565c0c790a9c5d2df56225bf58e25c2db7a9.png" title=" Administrador clears field vacancyName (completed)" width="1920"/>
+                <img src="6afdb3b34c5f0c5d1682e6ce7085565c0c790a9c5d2df56225bf58e25c2db7a9.png" title=" Administrador enters 'Tecnico de Data Base' into vacancyName" width="1920"/>
+                <img src="77093475372d722f4c49e76d97c64168b866a93354aaee50a113765ca60a9d3a.png" title=" Administrador enters 'Tecnico de Data Base' into vacancyName (completed)" width="1920"/>
+                <img src="77093475372d722f4c49e76d97c64168b866a93354aaee50a113765ca60a9d3a.png" title=" Administrador clears field hiringManagment" width="1920"/>
+                <img src="9fa42b4619f0e049ce8ec5c90bad3a54552d04028c425778e5443872e2099fa0.png" title=" Administrador clears field hiringManagment (completed)" width="1920"/>
+                <img src="9fa42b4619f0e049ce8ec5c90bad3a54552d04028c425778e5443872e2099fa0.png" title=" Administrador enters 'Cassidy Hope' into hiringManagment" width="1920"/>
+                <img src="dd8aca09fa85e10c8de0f9949fe51b4534987a16853e511a595e2efe5f624712.png" title=" Administrador enters 'Cassidy Hope' into hiringManagment (completed)" width="1920"/>
+                <img src="dd8aca09fa85e10c8de0f9949fe51b4534987a16853e511a595e2efe5f624712.png" title=" Administrador clears field numbersOfPositions" width="1920"/>
+                <img src="dd6229aeecdb1db1f4d2c81170dfcd29bd9e30764f325e9c0ac110488c59945f.png" title=" Administrador clears field numbersOfPositions (completed)" width="1920"/>
+                <img src="dd6229aeecdb1db1f4d2c81170dfcd29bd9e30764f325e9c0ac110488c59945f.png" title=" Administrador enters '2' into numbersOfPositions" width="1920"/>
+                <img src="0848464985ea9a03266d9f4c742899cc31b5a4f69dff75354de6fcb238f5cb4a.png" title=" Administrador enters '2' into numbersOfPositions (completed)" width="1920"/>
+                <img src="0848464985ea9a03266d9f4c742899cc31b5a4f69dff75354de6fcb238f5cb4a.png" title=" Administrador clears field description" width="1920"/>
+                <img src="c74f5bf19c09ceb6d05b7cf5e412492897bd8f1bd22b1a15c7d7f17e64f81dd2.png" title=" Administrador clears field description (completed)" width="1920"/>
+                <img src="c74f5bf19c09ceb6d05b7cf5e412492897bd8f1bd22b1a15c7d7f17e64f81dd2.png" title=" Administrador enters 'Apoyo del administrador de base de datos' into description" width="1920"/>
+                <img src="0cdac6abe9817f98741b0c74fc49716f58f3b876b144d608530328ad240f058a.png" title=" Administrador enters 'Apoyo del administrador de base de datos' into description (completed)" width="1920"/>
+                <img src="0cdac6abe9817f98741b0c74fc49716f58f3b876b144d608530328ad240f058a.png" title=" Administrador clicks on btnSave" width="1920"/>
+                <img src="cb153343af70726dd26e92d9bd46ef24ebcdc7beb23b8fed9308c57728bf65a0.png" title=" Administrador clicks on btnSave (completed)" width="1920"/>
+                <img src="cb153343af70726dd26e92d9bd46ef24ebcdc7beb23b8fed9308c57728bf65a0.png" title=" Administrador clicks on btnAddAttachment" width="1920"/>
+                <img src="42cff0d7015f593b60c210c01a0f81dd86efe30cea15158f4efe880420a3e5c0.png" title=" Administrador clicks on btnAddAttachment (completed)" width="1920"/>
+                <img src="42cff0d7015f593b60c210c01a0f81dd86efe30cea15158f4efe880420a3e5c0.png" title=" Administrador enters 'C:\Users\ThinkPad\Desktop\CURSO DE PROGRAMACION\TrainingSofka\Proyectos de Automatizacion\webUIOrangeHRM\src\test\resources\File\File.txt' into selectFile" width="1920"/>
+                <img src="42cff0d7015f593b60c210c01a0f81dd86efe30cea15158f4efe880420a3e5c0.png" title=" Administrador enters 'C:\Users\ThinkPad\Desktop\CURSO DE PROGRAMACION\TrainingSofka\Proyectos de Automatizacion\webUIOrangeHRM\src\test\resources\File\File.txt' into selectFile (completed)" width="1920"/>
+                <img src="9188eb852bcbbaaf065fc3d3bfb24815b2b18799c216210e020a52ee53d6b8e2.png" title=" Administrador clears field comment" width="1920"/>
+                <img src="0c9a86244b5a4eece70758ee15cd9421e9893b5159a5db6b7e7e4a787fd4bac9.png" title=" Administrador clears field comment (completed)" width="1920"/>
+                <img src="0c9a86244b5a4eece70758ee15cd9421e9893b5159a5db6b7e7e4a787fd4bac9.png" title=" Administrador enters 'Datos cargados correctamente' into comment" width="1920"/>
+                <img src="a4d114c642abf628605f6132dd227d4c42441ba366536b6ae990fc5c3e01cf45.png" title=" Administrador enters 'Datos cargados correctamente' into comment (completed)" width="1920"/>
+                <img src="a4d114c642abf628605f6132dd227d4c42441ba366536b6ae990fc5c3e01cf45.png" title=" Administrador clicks on btnSaveUpload" width="1920"/>
+                <img src="a152c84c41cfd6ff23f3737ac4ea13f4e54156f614e4ef08743b1c589202b8e4.png" title=" Administrador clicks on btnSaveUpload (completed)" width="1920"/>
+                <img src="a152c84c41cfd6ff23f3737ac4ea13f4e54156f614e4ef08743b1c589202b8e4.png" title=" Administrador fill fields vacancy new (completed)" width="1920"/>
+                <img src="a152c84c41cfd6ff23f3737ac4ea13f4e54156f614e4ef08743b1c589202b8e4.png" title=" When el empleado quiere crear una nueva vacante (completed)" width="1920"/>
+                <img src="a152c84c41cfd6ff23f3737ac4ea13f4e54156f614e4ef08743b1c589202b8e4.png" title=" Then el sistema deberia mostrar un mensaje Sucessfully saved." width="1920"/>
+                <img src="a152c84c41cfd6ff23f3737ac4ea13f4e54156f614e4ef08743b1c589202b8e4.png" title=" Then vacancy new should be (true)" width="1920"/>
+                <img src="a152c84c41cfd6ff23f3737ac4ea13f4e54156f614e4ef08743b1c589202b8e4.png" title=" Then el sistema deberia mostrar un mensaje Sucessfully saved. (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

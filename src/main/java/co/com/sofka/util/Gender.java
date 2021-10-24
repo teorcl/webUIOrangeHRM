@@ -1,7 +1,7 @@
 package co.com.sofka.util;
 
 public enum Gender {
-    MALE("Male"),
+    ADMIN("Admin"),
     FEMALE("Female"),
     OTHER("Other");
 
